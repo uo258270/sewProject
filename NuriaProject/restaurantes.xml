@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restaurantes SYSTEM "restaurantes.dtd">
+<restaurantes>
+    <restaurante name="Gloria Oviedo">
+        <tipo_establecimiento>Restaurante</tipo_establecimiento>
+        <tipo_cocina>Española</tipo_cocina>
+        <tipo_servicio>Servicio en mesa</tipo_servicio>
+        <dietas_espaciales>
+            <dieta>Opciones vegetarianas</dieta>
+            <dieta>Sin gluten</dieta>
+        </dietas_especiales>
+        <location>
+            <longitude>-5.8447600</longitude>
+            <latitude>43.3602900</latitude>
+        </location>
+    </restaurante>
+
+       <restaurante name="Casa Fermin">
+        <tipo_establecimiento>Restaurante</tipo_establecimiento>
+        <tipo_cocina>Española</tipo_cocina>
+        <tipo_servicio>Servicio en mesa</tipo_servicio>
+        <dietas_espaciales>
+            <dieta>Opciones vegetarianas</dieta>
+            <dieta>Sin gluten</dieta>
+        </dietas_especiales>
+        <location>
+            <longitude>-5.804771</longitude>
+            <latitude>43.389570</latitude>
+        </location>
+    </restaurante>
+
+</restaurantes>

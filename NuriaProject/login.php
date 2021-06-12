@@ -3,7 +3,7 @@ session_start();
 include 'BBDD.php';
 
 if (isset($_SESSION['currentUser'])) {
-    header('location:todas.php');
+    header('location:restaurantes.php');
     return;
 }
 
@@ -14,7 +14,7 @@ $driver = new mysqli_driver();
 $driver->report_mode = MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT;
 
 try {
-    $connection = new mysqli('localhost', 'DBUSER2018', 'DBPSWD2018');
+    $connection = new mysqli('localhost', 'DBUSER2020', 'DBPSWD2020');
     $connection->select_db('BD');
 
     $query = $connection->prepare('SELECT email,name FROM USER WHERE email = ? AND password = SHA1(?)');
@@ -27,7 +27,7 @@ try {
             'name' => $name
         ];
 
-        header('location:todas.php');
+        header('location:restaurantes.php');
     } else {
         header('location:login.html');
     }
