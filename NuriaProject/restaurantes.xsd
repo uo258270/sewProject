@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/restaurantes" elementFormDefault="qualified" targetNamespace="http://tempuri.org/restaurantes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="restaurantes">
+    <xs:complexType>
+      <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element ref="restaurante" />
+      </xs:sequence>
+      <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="restaurante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tipo_establecimiento" />
+        <xs:element ref="tipo_comida" />
+        <xs:element ref="tipo_servicio" />
+        <xs:element ref="dietas_especiales" />
+        <xs:element ref="location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipo_establecimiento">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipo_comida">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tipo_servicio">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dietas_especiales">
+    <xs:complexType>
+      <xs:sequence minOccurs="1" maxOccurs="unbounded">
+        <xs:element ref="dieta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dieta">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="location">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="latitud" />
+        <xs:element ref="longitud" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="latitud">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="longitud">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:decimal" />
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

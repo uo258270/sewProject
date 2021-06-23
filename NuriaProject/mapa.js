@@ -15,7 +15,7 @@ class Mapa {
     }
 
     addRestaurante(restaurante) {
-        cine.crearMarca(this.googleMapa);
+        restaurante.crearMarca(this.googleMapa);
     }
 
     centrarMapa(g) {
@@ -51,14 +51,17 @@ class Restaurantes {
 
     constructor(mapa) {
         this.mapa = mapa;
+        console.log(mapa);
         $.get('restaurantes.xml', this.mostrarResultados.bind(this));
     }
 
     mostrarResultados(r) {
-        $('rest', r).each((i, restaurante) => {
+        console.log(r);
+        $('restaurante', r).each((i, restaurante) => {
+            console.log(restaurante);
             var nombre = $(restaurante).attr('name');
-            var latitud = parseFloat($(cine).find('> location > latitude').text());
-            var longitud = parseFloat($(cine).find('> location > longitude').text());
+            var latitud = parseFloat($(restaurante).find('> location > latitude').text());
+            var longitud = parseFloat($(restaurante).find('> location > longitude').text());
             this.mapa.addRestaurante(new Restaurante(nombre, latitud, longitud));
         });
     }

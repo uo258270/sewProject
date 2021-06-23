@@ -15,7 +15,7 @@ try {
 
     $user = $_SESSION['currentUser']['user'];
 
-    $query = $connection->prepare('SELECT restaurante.nombre, restaurante.ubicacion, restaurante.id FROM restaurante JOIN favourites ON film.Id = favourites.restaurante_id where favourites.user_id = ?');
+    $query = $connection->prepare('SELECT restaurantes.nombre, restaurantes.ubicacion, restaurantes.id FROM restaurantes JOIN favourites ON restaurantes.id = favourites.restaurante_id where favourites.user_id = ?');
     $query->bind_param('s', $user);
     $query->bind_result($nombre, $ubicacion, $id);
     $query->execute();
@@ -30,7 +30,7 @@ try {
         <meta name="author" content="Nuria">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="jquery-3.4.0.min.js"></script>
-        <script src="score.js"></script>
+        <script src="rating.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,11 +38,14 @@ try {
 
     <body>
         <header>
-            <h1>Tus películas favoritas</h1>
+            <h1>Tus restaurantes favoritos</h1>
 
             <nav>
-                <a title="Página principal" accesskey="p" tabindex="1" href="todas.php">Página Principal</a>
+                <a title="Página principal" accesskey="p" tabindex="1" href="restaurantes.php">Página Principal</a>
                 <a title="Ayuda" accesskey="a" tabindex="2" href="Guias/guia_favoritos.html">Ayuda</a>
+                <a title="Favoritos" accesskey="f" tabindex="3" href="favoritos.php">Favoritos</a>
+                <a title="Mapa" accesskey="c" tabindex="4" href="mapa.html">Mapa</a>
+                <a title="Reseñas" accesskey="p" tabindex="5" href="premios.php">Premios</a>
             </nav>
         </header>
         <table class="restaurantes">

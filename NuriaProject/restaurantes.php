@@ -15,8 +15,8 @@ try {
     $connection = new mysqli('localhost', 'DBUSER2020', 'DBPSWD2020');
     $connection->select_db('BD');
 
-    $query = $connection->prepare('SELECT * FROM restaurant');
-    $query->bind_result($ombre, $ubicacion, $id);
+    $query = $connection->prepare('SELECT * FROM restaurantes');
+    $query->bind_result($nombre, $ubicacion, $id);
     $query->execute();
 
     ?>
@@ -29,20 +29,21 @@ try {
         <meta name="author" content="Nuria">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="jquery-3.4.0.min.js"></script>
-        <script src="score.js"></script>
+        
+        <script src="rating.js"></script>
         <script src="notify.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
     <body>
         <header>
-            <h1>Todas los Restaurantes</h1>
+            <h1>Todos los Restaurantes</h1>
             <nav>
                 <a title="Página principal" accesskey="r" tabindex="1" href="restaurantes.php">Pagina Principal</a>
                 <a title="Ayuda" accesskey="a" tabindex="2" href="Guias/guia_restaurantes.html">Ayuda</a>
-                <a title="Favoritos" accesskey="f" tabindex="3" href="favoritos.php">Favoritas</a>
-                <a title="Mapa" accesskey="c" tabindex="4" href="mapa.html">Cines</a>
-                <a title="Reseñas" accesskey="p" tabindex="5" href="reseñas.php">Premios</a>
+                <a title="Favoritos" accesskey="f" tabindex="3" href="favoritos.php">Favoritos</a>
+                <a title="Mapa" accesskey="c" tabindex="4" href="mapa.html">Mapa</a>
+                <a title="Reseñas" accesskey="p" tabindex="5" href="premios.php">Premios</a>
             </nav>
         </header>
         <table class="restaurantes">
@@ -72,7 +73,7 @@ try {
                     <tr>
                         <td><?php echo $nombre; ?></td>
                         <td><?php echo $ubicacion; ?></td>
-                        <td class="score" data-imdbID="<?php echo $id; ?>"></td>
+                        <td class="rating" data-places="<?php echo $id; ?>"></td>
                         <td>
                             <?php if ($favorito) { ?>
                                 Favorito

@@ -5,11 +5,12 @@ $username = "DBUSER2020";
 $password = "DBPSWD2020";
 $database = "BD";
 $usuarios = "user";
-$restaurantes = "restaurante";
+$restaurantes = "restaurantes";
 $favoritos = "favourites";
 
 try {
     $connection = new mysqli($servername, $username, $password);
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $crearbase = "CREATE DATABASE IF NOT EXISTS " . $database . " COLLATE utf8_spanish_ci";
     $connection->query($crearbase);
 
@@ -31,7 +32,7 @@ try {
 
     $crearTabla2 = "CREATE TABLE IF NOT EXISTS " . $restaurantes . " (
         nombre varchar(50) NOT NULL,
-        ubicacion varcahar(50) NOT NULL,
+        ubicacion varchar(50) NOT NULL,
         id varchar(50) NOT NULL,
             PRIMARY KEY (id))";
 
@@ -40,28 +41,28 @@ try {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // CREO LOS RESTAURNTES // 
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Gloria Oviedo", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Gloria Oviedo", "Oviedo", "ChIJv_x0pwKNNg0Rpu1Hcj2XTuk")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Sidrería El Gato Negro", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Sidrería El Gato Negro", "Oviedo", "ChIJ24wgHe-MNg0RWDddO1n0EdU")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Restaurante De Labra Oviedo", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Restaurante De Labra Oviedo", "Oviedo", "ChIJ__-TxIOMNg0RscAppeLHb84")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Casa Fermin", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Casa Fermin", "Oviedo", "ChIJKYdwaeWMNg0RJNh1gf9OAy4")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Tierra Astur Gascona", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Tierra Astur Gascona", "Oviedo", "ChIJs6gyJPCMNg0R4xx3L8WrCy0")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("La Corte de Pelayo", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("La Corte de Pelayo", "Oviedo", "ChIJOQ0SGuWMNg0RSZ0UX3s5-LU")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("La Genuina de Cimadevilla", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("La Genuina de Cimadevilla", "Oviedo", "ChIJ3TzJDO-MNg0R6xBU-yeHm6U")';
     $connection->query($crearRestaurantes);
 
-    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Mesón la Comtienda Oviedo", "Oviedo", "tt0120338")';
+    $crearRestaurantes = 'INSERT INTO restaurantes (nombre, ubicacion, id) VALUES ("Mesón la Comtienda Oviedo", "Oviedo", "ChIJNQVkQfyMNg0Ro7yUfpcb8-8")';
     $connection->query($crearRestaurantes);
 
    
@@ -74,7 +75,7 @@ try {
     $crearFavoritas = "CREATE TABLE IF NOT EXISTS " . $favoritos . " (
         user_id varchar(50) NOT NULL,
         restaurante_id varchar(50) NOT NULL,
-        FOREIGN KEY (restaurante_id) REFERENCES restaurante(Id),
+        FOREIGN KEY (restaurante_id) REFERENCES restaurantes(Id),
         FOREIGN KEY (user_id) REFERENCES user(Email))";
 
     $connection->query($crearFavoritas);
@@ -83,5 +84,5 @@ try {
 
     $connection->close();
 } catch (mysqli_sql_exception  $e) {
-    header(' location: error . php ? mensaje =' . urlencode($e->message));
+    header('location:error.php?mensaje=' . urlencode($e->getMessage()));
 }

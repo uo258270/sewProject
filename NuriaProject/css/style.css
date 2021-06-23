@@ -7,7 +7,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     background-color: black;
-    border: 10px solid rgb(238, 118, 6);
+    border: green;
 }
 
 /*001*/
@@ -58,7 +58,7 @@ form input,
     font-size: 16px;
     padding: 0.4em 1.5em;
     color: white;
-    background-color: rgb(238, 118, 6);
+    background-color: green;
 }
 
 #registerButton {
@@ -88,7 +88,7 @@ body {
 /*022*/
 a:link,
 a:visited {
-    background-color: rgb(238, 118, 6);
+    background-color: green;
     color: rgb(255, 255, 255);
     padding: 7px 12px;
     text-align: center;
@@ -98,7 +98,7 @@ a:visited {
 
 /*001*/
 nav {
-    background-color: rgb(238, 118, 6);
+    background-color: lightblue;
 }
 
 /*100*/
@@ -131,28 +131,28 @@ footer a:visited {
 }
 
 /*111*/
-.peliculas tr:nth-child(even) {
+.restaurante tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
 /*202*/
-.peliculas td,
-.peliculas th {
+.restaurante td,
+.restaurante th {
     border: 1px solid #ddd;
     padding: 0.2%;
 }
 
 /*111*/
-.peliculas tr:hover {
+.restaurante tr:hover {
     background-color: #ddd;
 }
 
 /*101*/
-.peliculas th {
+.restaurante th {
     padding-top: 6px;
     padding-bottom: 6px;
     text-align: left;
-    background-color: rgb(238, 118, 6);
+    background-color: green;
     color: white;
     text-align: center;
 }

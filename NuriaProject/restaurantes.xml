@@ -1,31 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE restaurantes SYSTEM "restaurantes.dtd">
 <restaurantes>
     <restaurante name="Gloria Oviedo">
         <tipo_establecimiento>Restaurante</tipo_establecimiento>
         <tipo_cocina>Española</tipo_cocina>
         <tipo_servicio>Servicio en mesa</tipo_servicio>
-        <dietas_espaciales>
+        <dietas_especiales>
             <dieta>Opciones vegetarianas</dieta>
             <dieta>Sin gluten</dieta>
         </dietas_especiales>
         <location>
-            <longitude>-5.8447600</longitude>
-            <latitude>43.3602900</latitude>
+            <longitude>-5.856705</longitude>
+            <latitude>43.363694</latitude>
         </location>
     </restaurante>
 
-       <restaurante name="Casa Fermin">
+    <restaurante name="Casa Fermin">
         <tipo_establecimiento>Restaurante</tipo_establecimiento>
         <tipo_cocina>Española</tipo_cocina>
         <tipo_servicio>Servicio en mesa</tipo_servicio>
-        <dietas_espaciales>
+        <dietas_especiales>
             <dieta>Opciones vegetarianas</dieta>
             <dieta>Sin gluten</dieta>
         </dietas_especiales>
         <location>
-            <longitude>-5.804771</longitude>
-            <latitude>43.389570</latitude>
+            <longitude>-5.846815884210392</longitude>
+            <latitude>43.3623656821493</latitude>
+        </location>
+    </restaurante>
+
+    <restaurante name="Sidrería El Gato Negro">
+        <tipo_establecimiento>Restaurante</tipo_establecimiento>
+        <tipo_cocina>Española</tipo_cocina>
+        <tipo_servicio>Servicio en mesa</tipo_servicio>
+        <dietas_especiales>
+            <dieta>Opciones vegetarianas</dieta>
+            <dieta>Opciones veganas</dieta>
+        </dietas_especiales>
+        <location>
+            <longitude>-5.843736708430335</longitude>
+            <latitude>43.36078223292152</latitude>
+        </location>
+    </restaurante>
+
+    <restaurante name="Restaurante de Labra Oviedo">
+        <tipo_establecimiento>Restaurante</tipo_establecimiento>
+        <tipo_cocina>Española</tipo_cocina>
+        <tipo_servicio>Servicio en mesa</tipo_servicio>
+        <dietas_especiales>
+            <dieta>Opciones vegetarianas</dieta>
+            <dieta>Sin gluten</dieta>
+        </dietas_especiales>
+        <location>
+            <longitude>-5.819408205097134</longitude>
+            <latitude>43.363773078360325</latitude>
+        </location>
+    </restaurante>
+
+    <restaurante name="Tierra Astur Gascona">
+        <tipo_establecimiento>Restaurante</tipo_establecimiento>
+        <tipo_cocina>Española</tipo_cocina>
+        <tipo_servicio>Servicio en mesa</tipo_servicio>
+        <dietas_especiales>
+            <dieta>Opciones vegetarianas</dieta>
+            <dieta>Sin gluten</dieta>
+        </dietas_especiales>
+        <location>
+            <longitude>-5.8444922419543515</longitude>
+            <latitude>43.36490370727607</latitude>
         </location>
     </restaurante>
 

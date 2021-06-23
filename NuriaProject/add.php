@@ -6,7 +6,7 @@ if (!isset($_SESSION['currentUser'])) {
     return;
 }
 
-$film = $_GET['id'];
+$restaurante = $_GET['id'];
 $user = $_SESSION['currentUser']['user'];
 
 $driver = new mysqli_driver();
@@ -18,12 +18,12 @@ try {
     $connection->select_db('BD');
 
     $query = $connection->prepare('INSERT INTO FAVOURITES VALUES (?, ?)');
-    $query->bind_param('ss', $user, $restaurantes);
+    $query->bind_param('ss', $user, $restaurante);
     $query->execute();
 
     header('location:favoritos.php');
 
     $connection->close();
 } catch (mysqli_sql_exception  $e) {
-    header('location:error.php?mensaje=' . urlencode($e->message));
+    header('location:error.php?mensaje=' . urlencode($e->getMessage()));
 }

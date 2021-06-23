@@ -1,0 +1,48 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT restaurantes (restaurante)+>
+<!ATTLIST restaurantes
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT restaurante (tipo_establecimiento,tipo_comida,tipo_servicio,dietas_especiales,location)>
+
+<!ATTLIST restaurantes
+  xmlns CDATA #FIXED ''
+  name CDATA #REQUIRED>
+
+<!ELEMENT tipo_establecimiento (#PCDATA)>
+<!ATTLIST tipo_establecimiento
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT tipo_comida (#PCDATA)>
+<!ATTLIST tipo_comida
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT tipo_servicio (#PCDATA)>
+<!ATTLIST tipo_servicio
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dietas_especiales (dieta)+>
+<!ATTLIST dietas_especiales
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dieta (#PCDATA)>
+<!ATTLIST dieta
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT location (latitud, longitud)>
+<!ATTLIST location
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT latitud (#PCDATA)>
+<!ATTLIST latitud
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
