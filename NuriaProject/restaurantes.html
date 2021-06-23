@@ -1,0 +1,114 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Restaurantes</title>
+        <meta name="author" content="Nuria">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.4.0.min.js"></script>
+        
+        <script src="rating.js"></script>
+        <script src="notify.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Todos los Restaurantes</h1>
+            <nav>
+                <a title="Página principal" accesskey="r" tabindex="1" href="restaurantes.php">Pagina Principal</a>
+                <a title="Ayuda" accesskey="a" tabindex="2" href="Guias/guia_restaurantes.html">Ayuda</a>
+                <a title="Favoritos" accesskey="f" tabindex="3" href="favoritos.php">Favoritos</a>
+                <a title="Mapa" accesskey="c" tabindex="4" href="mapa.html">Mapa</a>
+                <a title="Reseñas" accesskey="p" tabindex="5" href="premios.php">Premios</a>
+            </nav>
+        </header>
+        <table class="restaurantes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Ubicacion</th>
+                    <th>Puntuacion</th>
+                    <th>Favorito</th>
+                </tr>
+            </thead>
+            <tbody>
+                                    <tr>
+                        <td>Sidrería El Gato Negro</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJ24wgHe-MNg0RWDddO1n0EdU"></td>
+                        <td>
+                                                            Favorito
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>La Genuina de Cimadevilla</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJ3TzJDO-MNg0R6xBU-yeHm6U"></td>
+                        <td>
+                                                            Favorito
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>Casa Fermin</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJKYdwaeWMNg0RJNh1gf9OAy4"></td>
+                        <td>
+                                                            Favorito
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>Mesón la Comtienda Oviedo</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJNQVkQfyMNg0Ro7yUfpcb8-8"></td>
+                        <td>
+                                                            Favorito
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>La Corte de Pelayo</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJOQ0SGuWMNg0RSZ0UX3s5-LU"></td>
+                        <td>
+                                                            <a onclick="nota.spawnNotification('Acabas de añadir el restaurante a favoritos')" href="add.php?id=ChIJOQ0SGuWMNg0RSZ0UX3s5-LU">Marcar como favorito</a>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>Tierra Astur Gascona</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJs6gyJPCMNg0R4xx3L8WrCy0"></td>
+                        <td>
+                                                            Favorito
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>Gloria Oviedo</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJv_x0pwKNNg0Rpu1Hcj2XTuk"></td>
+                        <td>
+                                                            <a onclick="nota.spawnNotification('Acabas de añadir el restaurante a favoritos')" href="add.php?id=ChIJv_x0pwKNNg0Rpu1Hcj2XTuk">Marcar como favorito</a>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <td>Restaurante De Labra Oviedo</td>
+                        <td>Oviedo</td>
+                        <td class="rating" data-places="ChIJ__-TxIOMNg0RscAppeLHb84"></td>
+                        <td>
+                                                            <a onclick="nota.spawnNotification('Acabas de añadir el restaurante a favoritos')" href="add.php?id=ChIJ__-TxIOMNg0RscAppeLHb84">Marcar como favorito</a>
+                                                    </td>
+                    </tr>
+                        </tbody>
+    </table>
+
+    <footer>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" alt=" HTML5 Válido!" height="64" width="63" /> </a>
+
+        <a href=" https://jigsaw.w3.org/css-validator/check/referer ">
+            <img src=" https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88" /></a>
+    </footer>
+</body>
+
+</html>
