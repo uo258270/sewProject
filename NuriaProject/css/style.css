@@ -76,7 +76,7 @@ body {
 }
 
 /*100*/
-#peliculas {
+#restaurantes {
     margin: 3%;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -119,7 +119,7 @@ footer a:visited {
 }
 
 /*100*/
-.peliculas {
+.restaurantes{
     margin: 1%;
     margin-right: auto;
     margin-left: auto;
