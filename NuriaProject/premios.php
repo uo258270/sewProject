@@ -35,15 +35,14 @@ try {
         <header>
             <h1>Todos los premios</h1>
             <nav>
-                <a title="Página principal" accesskey="r" tabindex="1" href="restaurantes.php">Pagina Principal</a>
-                <a title="Ayuda" accesskey="a" tabindex="2" href="Guias/guia_premios.html">Ayuda</a>
-                <a title="Favoritos" accesskey="f" tabindex="3" href="favoritos.php">Favoritos</a>
-                <a title="Mapa" accesskey="c" tabindex="4" href="mapa.html">Mapa</a>
-                
+                <a class="Página principal" href="restaurantes.php">Página Principal</a>
+                <a class="Ayuda" href="Guias/guia_premios.html">Ayuda</a>
+                <a class="Favoritos" href="favoritos.php">Favoritos</a>
+                <a class="Mapa" href="mapa.html">Mapa</a>
             </nav>
         </header>
         <button id="inicio">Ir a inicio</button>
-        <button id="restaurantes">Ir a resturantes</button>
+        <button id="atras">Ir a atras</button>
         <table class="premios">
             <thead>
                 <tr>

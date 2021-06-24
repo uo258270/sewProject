@@ -3,17 +3,17 @@ class GestorHistorial {
 
     constructor(){
         $('#inicio').click(this.indice.bind(this));
-        $('#restaurantes').click(this.atras.bind(this));
+        $('#atras').click(this.atras.bind(this));
     }
-    atras(){
-        history.go(-1);
-    }
+    
 
     indice(){
         history.go(-2);
     }
 
-   
+    atras(){
+        history.go(-1);
+    }
 }
 
 $(function () {
