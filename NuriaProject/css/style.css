@@ -95,6 +95,11 @@ a {
     display: inline-block;
 }
 
+table.restaurantes a  {
+    background-color: rgb(200,200,200);
+    color: rgb(0,40,0);
+}
+
 /*001*/
 nav {
     background-color: lightblue;
